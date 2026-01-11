@@ -22,10 +22,11 @@ if st.button("Diagnosa"):
         konversi(penciuman)
     ]])
 
-    hasil = model.predict(data)
+    hasil = model.predict(input_data)
 
     if hasil[0] == 1:
         st.error("⚠️ Hasil: POSITIF COVID-19")
     else:
 
         st.success("✅ Hasil: NEGATIF COVID-19")
+
