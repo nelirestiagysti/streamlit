@@ -1,8 +1,5 @@
 import streamlit as st
-import joblib
 import numpy as np
-
-model = joblib.load('model_covid_dt.pkl')
 
 st.set_page_config(page_title="Deteksi COVID-19", layout="centered")
 
@@ -30,4 +27,5 @@ if st.button("Diagnosa"):
     if hasil[0] == 1:
         st.error("⚠️ Hasil: POSITIF COVID-19")
     else:
+
         st.success("✅ Hasil: NEGATIF COVID-19")
